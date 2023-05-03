@@ -1,0 +1,171 @@
+/*police*/
+@font-face {
+    font-family: 'Aldrich';
+    src: url('Aldrich-Regular.ttf')
+}
+/* toutes les pages */
+body
+{
+    font-family: 'Aldrich-Regular.ttf',Arial, Helvetica, sans-serif;
+    color: white;
+    background: rgb(0,0,0);
+    background: linear-gradient(18deg, rgba(0,0,0,1) 79%, rgba(255,235,156,1) 100%);  
+    background-attachment: fixed;
+}
+.flex
+{
+    display: flex;
+}
+.row
+{
+    flex-direction: row;
+}
+.column
+{
+    flex-direction: column;
+}
+
+
+/* navbar */
+
+.logonav img
+{
+    width: 50px;
+}
+.navbar
+{
+    list-style: none;
+    justify-content: space-between;
+}
+.navpage
+{
+    margin-top: 15px;
+    width: 80%;
+    justify-content: space-evenly;
+}
+.search
+{
+    width: 200px;
+    height: 20px;
+    background-color: blue;
+    border-radius: 5px;
+}
+.modelightsombre
+{
+    width: 50px;
+    height: 20px;
+    border-radius: 25%;
+    background-color: yellow;
+}
+.profil
+{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: red;
+}
+
+/*page accueil*/
+.texte_intro
+{
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+}
+.interraction_page
+{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-around;
+    color: black;
+}
+.inter_left
+{
+    justify-content: space-evenly;
+    text-align: center;
+    background-color: white;
+    width: 35%;
+    height: 300px;
+    border-radius: 15px;
+}
+.inter_right
+{
+    justify-content: space-evenly;
+    text-align: center;
+    background-color: white;
+    width: 35%;
+    height: 300px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+
+}
+.selecteur
+{
+    text-align: center;
+    margin-right: 20%;
+    margin-left: 20%;
+    margin-bottom: 20px;
+}
+.search_inter
+{
+    margin-bottom: 20px;
+    margin-right: 20%;
+    margin-left: 20%;
+    border: 1px solid black;
+}
+.button
+{
+    text-decoration: none;
+    color: black;
+
+}
+.inter_link
+{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 12px;
+    height: 30px;
+    width: 150px;
+    border-radius: 10px;
+    background-color: #FFEB9C;
+}
+.image_banniere
+{
+    background-image: url(../Ressources/vinyl_gauche.png);
+    background-position-y: center;
+    background-size: cover;
+    height: 500px; 
+    justify-content: space-evenly;
+}
+.lignes
+{
+    justify-content: space-evenly;
+    justify-content: center;
+    text-decoration: underline;
+    margin: auto;
+}
+.ligne1
+{
+    width: 400px;
+    justify-content: space-between;
+    margin: 20px;
+}
+.image_banniere img
+{
+    width: 100px;
+}
+.social_media
+{
+    width: 15%;
+    justify-content: space-evenly;
+}
+.social_media img
+{
+    width: 50px;
+}
+
