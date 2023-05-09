@@ -44,6 +44,6 @@
             <i class="fa fa-volume-up"></i>
         </div>
     </div>    
-    <script src="../main.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
