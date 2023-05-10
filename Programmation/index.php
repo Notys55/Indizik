@@ -11,8 +11,8 @@
 <body>
     <div class=" flex row navbar">
         <div class="flex row">
-            <div class="logonav"><img src="lecteur/logozic2.png" alt="logo indizik"></div>
-            <div class="textnav"><p>INDIZIK</p></div>
+            <div class="image_logo"><img src="../Ressources/image_logo.png" alt="image logo indizik"></div>
+            <div class="texte_logo"><img src="../Ressources/texte_logo.png" alt="texte logo indizik"></div>
         </div>
         <div class="flex row navpage">
             <a href="index.php"class="navlink active">Accueil</a>
