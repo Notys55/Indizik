@@ -6,7 +6,8 @@
 /* toutes les pages */
 body
 {
-  font-size: 1.2em;
+    margin: 0;
+    font-size: 1.2em;
     font-family: 'Aldrich-Regular.ttf',Arial, Helvetica, sans-serif;
     color: white;
     background: rgb(0,0,0);
@@ -25,9 +26,26 @@ body
 {
     flex-direction: column;
 }
+.text-info
+{
+    width: 100%;
+    margin: auto;
+}
+    .text-success
+    {
+        color: green;
+        margin-left: 10px;
+        
+    }
+    .text-danger
+    {
+        color: red;
+        margin-left: 10px;
+    }
 .invisible 
 {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
 }
 /* mode sombre */
 *
@@ -43,6 +61,11 @@ body
 {
     background-color: #454445;
     color: white ;
+}
+.dark .bloc_blanc
+{
+    background-color: #454445;
+    color: white;
 }
 .dark .carousel
 {
@@ -117,8 +140,34 @@ body
 .texte_logo
 {
     height: 50px;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease, left 1s;
+}
+
+.texte_logo.invisible 
+{
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease;
+}
+.texte_logo.move-left
+{
+    position: fixed;
+    left: 0;
+    z-index: -1;
+    transition: left 1s;
 }
 .texte_logo img
+{
+    height: 100%;
+    width: auto;
+}
+.fin_logo
+{
+    height: 50px;
+}
+.fin_logo img
 {
     height: 100%;
     width: auto;
@@ -126,7 +175,7 @@ body
 .navbar
 {
     list-style: none;
-    justify-content: space-between;
+    justify-content: space-evenly;
     overflow: hidden;
     position: fixed;
     top: 0;
@@ -137,7 +186,14 @@ body
 {
     background-color: #454445;
 }
-
+.navbar.scrolled .texte_logo
+{
+    transition: opacity 1s ease, left 1s;
+}
+.navbar.scrolled .texte_logo.invisible 
+{
+    transition: opacity 0.5s ease;
+  }
 .navpage
 {
     margin-top: 15px;
@@ -161,12 +217,14 @@ a:hover
 
 .profil
 {
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
-    background-color: red;
+    width: 200px;
+    align-items: center;
+    justify-content: space-between;
 }
-
+.profil > a 
+{
+    color: black;
+}
 /*page accueil*/
 .texte_intro
 {
@@ -197,8 +255,9 @@ a:hover
     }
     .inter_text
     {
-    margin-left: 50px;
-    margin-right: 50px;
+        margin-left: 50px;
+        margin-right: 50px;
+        height: 100%;
     }
     .inter_right
     {
@@ -302,6 +361,10 @@ a:hover
     background-color: white;
     color: black;
   }
+  .carousel > h1
+  {
+    padding-top: 10px;
+  }
   .carousel_box a
   {
     text-decoration: none;
@@ -402,3 +465,33 @@ a:hover
         border-radius: 50%;
     }
 /*----------------fin du footer-------------*/
+
+/* page login inscription */
+.container
+{
+    width: 100%;
+}
+.bloc_blanc
+{
+    text-align: center;
+    width: 70%;
+    height: 700px;
+    margin-top: 60px; 
+    background-color: white;
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    justify-content: space-evenly;
+}
+.formulaire
+{
+    width: 60%;
+    margin: auto;
+    justify-content: space-evenly;
+    height: 100%;
+}
+.texte-info
+{
+    margin-top: 60px;
+}

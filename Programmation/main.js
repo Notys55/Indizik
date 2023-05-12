@@ -27,17 +27,25 @@ window.addEventListener('scroll', function() {
 
 //disparition du titre dans le logo
 
-// Sélectionnez l'élément du titre du logo
-var titreLogo = document.querySelector('.texte_logo');
-
-// Gérez l'événement de défilement de la fenêtre
 window.addEventListener('scroll', function() {
-  // Vérifiez si la position de défilement est supérieure à 0 (vers le bas)
-  if (window.scrollY > 0) {
-    // Ajoutez une classe CSS pour masquer le titre du logo
-    titreLogo.classList.add('invisible');
-  } else {
-    // Supprimez la classe CSS pour afficher le titre du logo
-    titreLogo.classList.remove('invisible');
-  }
-});
+	var texteLogo = document.querySelector('.texte_logo');
+	var imageLogo = document.querySelector('.image_logo');
+  
+	var scrollPos = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+  
+	if (scrollPos > 0) {
+	  // Faire disparaître le texte_logo en le fondu (fade-out)
+	  texteLogo.classList.add('invisible');
+	  texteLogo.classList.remove('move-left');
+	} else {
+	  // Faire réapparaître le texte_logo en le fondu (fade-in)
+	  texteLogo.classList.remove('invisible');
+	  texteLogo.classList.remove('move-left');
+	}
+  
+	if (scrollPos > imageLogo.clientHeight) {
+	  // Faire bouger le texte_logo sur la gauche derrière l'image_logo
+	  texteLogo.classList.add('move-left');
+	}
+  });
+
