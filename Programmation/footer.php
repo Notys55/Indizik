@@ -9,9 +9,9 @@
             <a href="Politique_des_cookies.php" class="navlink">Politique des cookies</a>
         </div>
         <div class="flex row social_media">
-            <a href="twitter.com"><img src="http://127.0.0.1/2023/Indizik_2.0/Indizik/Ressources/twitter_icon.png"></a>
-            <a href="facebook.com"><img src="http://127.0.0.1/2023/Indizik_2.0/Indizik/Ressources/facebook_icon.png"></a>
-            <a href="instagram.com"><img src="http://127.0.0.1/2023/Indizik_2.0/Indizik/Ressources/insta_icon.png"></a>
+            <a href="https://twitter.com"><img src="Ressources/twitter_icon.png"></a>
+            <a href="https://facebook.com/"><img src="Ressources/facebook_icon.png"></a>
+            <a href="https://instagram.com/"><img src="Ressources/insta_icon.png"></a>
         </div>
     </div>
     </footer>

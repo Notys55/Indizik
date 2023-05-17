@@ -18,7 +18,7 @@
             else
             {
                 $message = "Erreur il y a une erreur dans votre pseudo ou mot de passe";
-                header("location: http://127.0.0.1/2023/Indizik_2.0/Indizik/Programmation/crud/login_user_form.php?statut=$message");
+                header("location: Programmation/crud/login_user_form.php?statut=$message");
             }
         }
     }

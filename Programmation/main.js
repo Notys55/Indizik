@@ -25,7 +25,7 @@ window.addEventListener('scroll', function() {
 });
 //fin changement couleur navbar
 
-//disparition du titre dans le logo
+//disparition du titre dans le logo  !!!(pas terminer)!!!  //
 
 window.addEventListener('scroll', function() {
 	var texteLogo = document.querySelector('.texte_logo');
@@ -48,4 +48,72 @@ window.addEventListener('scroll', function() {
 	  texteLogo.classList.add('move-left');
 	}
   });
+//fin de disparition du titre dans le logo//
 
+//drag n drop//
+document.querySelectorAll(".dropzone__input").forEach((inputElement) => {
+	const dropZoneElement = inputElement.closest(".dropzone");
+  
+	dropZoneElement.addEventListener("click", (e) => {
+	  inputElement.click();
+	});
+  
+	inputElement.addEventListener("change", (e) => {
+	  if (inputElement.files.length) {
+		updateThumbnail(dropZoneElement, inputElement.files[0]);
+	  }
+	});
+  
+	dropZoneElement.addEventListener("dragover", (e) => {
+	  e.preventDefault();
+	  dropZoneElement.classList.add("dropzone--over");
+	});
+  
+	["dragleave", "dragend"].forEach((type) => {
+	  dropZoneElement.addEventListener(type, (e) => {
+		dropZoneElement.classList.remove("dropzone--over");
+	  });
+	});
+  
+	dropZoneElement.addEventListener("drop", (e) => {
+	  e.preventDefault();
+  
+	  if (e.dataTransfer.files.length) {
+		inputElement.files = e.dataTransfer.files;
+		updateThumbnail(dropZoneElement, e.dataTransfer.files[0]);
+	  }
+  
+	  dropZoneElement.classList.remove("dropzone--over");
+	});
+  });
+
+  function updateThumbnail(dropZoneElement, file) {
+	let thumbnailElement = dropZoneElement.querySelector(".dropzone__thumb");
+  
+	// pour retirer la phrase
+	if (dropZoneElement.querySelector(".dropzone_title")) {
+	  dropZoneElement.querySelector(".dropzone_title").remove();
+	}
+  
+	if (!thumbnailElement) {
+	  thumbnailElement = document.createElement("div");
+	  thumbnailElement.classList.add("dropzone__thumb");
+	  dropZoneElement.appendChild(thumbnailElement);
+	}
+  
+	thumbnailElement.dataset.label = file.name;
+  
+	// Show thumbnail for image files
+	if (file.type.startsWith("image/")) {
+	  const reader = new FileReader();
+  
+	  reader.readAsDataURL(file);
+	  reader.onload = () => {
+		thumbnailElement.style.backgroundImage = `url('${reader.result}')`;
+	  };
+	} else {
+	  thumbnailElement.style.backgroundImage = null;
+	}
+  }
+  
+//fin drag n drop //

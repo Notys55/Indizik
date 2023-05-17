@@ -16,7 +16,7 @@
                 $sql = $requete->execute([$_POST['pseudo'], $mdp, $_POST['email'],$_POST['nickname'],$_POST['name']]);
 
                 $message = "Vous avez bien était enregistrer";
-                header("location: ../read/profil.php?message=$message");
+                header("location: profil.php?message=$message");
                 exit;
             }
             catch (PDOException $e) 
