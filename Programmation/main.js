@@ -86,34 +86,5 @@ document.querySelectorAll(".dropzone__input").forEach((inputElement) => {
 	  dropZoneElement.classList.remove("dropzone--over");
 	});
   });
-
-  function updateThumbnail(dropZoneElement, file) {
-	let thumbnailElement = dropZoneElement.querySelector(".dropzone__thumb");
-  
-	// pour retirer la phrase
-	if (dropZoneElement.querySelector(".dropzone_title")) {
-	  dropZoneElement.querySelector(".dropzone_title").remove();
-	}
-  
-	if (!thumbnailElement) {
-	  thumbnailElement = document.createElement("div");
-	  thumbnailElement.classList.add("dropzone__thumb");
-	  dropZoneElement.appendChild(thumbnailElement);
-	}
-  
-	thumbnailElement.dataset.label = file.name;
-  
-	// Show thumbnail for image files
-	if (file.type.startsWith("image/")) {
-	  const reader = new FileReader();
-  
-	  reader.readAsDataURL(file);
-	  reader.onload = () => {
-		thumbnailElement.style.backgroundImage = `url('${reader.result}')`;
-	  };
-	} else {
-	  thumbnailElement.style.backgroundImage = null;
-	}
-  }
   
 //fin drag n drop //

@@ -4,8 +4,6 @@ if ($_POST)
 {
     if ( !empty($_POST['name']) && !empty($_POST['author'])){
 
-        // on Upload l'image
-
         $fileExtensions= ['mp3', 'wav'];
 
         if($_FILES){
@@ -18,7 +16,7 @@ if ($_POST)
                 $newName .= '.' . $fileExtension;
                 if (move_uploaded_file($_FILES['myFile']['tmp_name'], "../../../Ressources/uploads/$newName")){
 
-                    $sql = "INSERT INTO musiques (name, author, myFile ) VALUES (?,?,?)";
+                    $sql = "INSERT INTO musique (name, author, myFile ) VALUES (?,?,?)";
                     $PDO->prepare($sql)->execute([$_POST['name'], $_POST['author'], $newName]);
                     $message = "Votre fichier à bien était envoyé";
                     Header("Location: upload_form.php?message=$message");

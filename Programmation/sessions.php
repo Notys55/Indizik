@@ -5,7 +5,7 @@
             
             if(!$_SESSION['login'])
             {
-                header("location: http://127.0.0.1/tp/orphelinat1/login.php");
+                header("location: login_user_form.php");
             }
     }
 ?>

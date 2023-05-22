@@ -115,8 +115,9 @@ body
     }
 .modelightsombre
 {
-    margin-top: -15px;
+    margin-top: -10px;
     width: 150px;
+    height: 50px;
     align-items: center;
     justify-content: space-between;
 }
@@ -128,6 +129,11 @@ body
 
 
 /* navbar */
+.logo
+{
+    height: 50px;
+    margin-top: 5px;
+}
 .image_logo
 {
     height: 50px;
@@ -218,13 +224,60 @@ a:hover
 .profil
 {
     width: 200px;
-    align-items: center;
-    justify-content: space-between;
 }
 .profil > a 
 {
     color: white;
 }
+ul
+{
+    list-style-type: none;
+}
+
+ul a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    width: 100%;
+}
+
+.sous{
+    display: none;
+    position: fixed;
+    list-style: none;
+    width: 150px;
+    background-color: #454445;
+}
+
+ul li:hover .sous{
+    display: block;
+}
+.sous li{
+    width: 100%;
+    text-align: left;
+    margin-left: -30px;
+}
+.sous a{
+    padding: 10px;
+    border-bottom: none;
+}
+.sous a:hover{
+    border-bottom: none;
+    background-color: #454445;
+}
+.deroulant
+{
+    margin-top: -15px;
+}
+
+
+
+
+
+
+
+
+
 /*page accueil*/
 .texte_intro
 {
@@ -495,14 +548,17 @@ a:hover
 {
     margin-top: 60px;
 }
+#uploadForm
+{
+    justify-content: space-between;
+}
 .dropzone
 {
     width: 700px;
     margin: auto;
-    height: 400px;
+    height: 200px;
     border: 2px dashed #ccc;
     border-radius: 15px;
-    color: rgba(0, 0, 0, 0.452);
     align-items: center;
     justify-content: center;
     cursor: pointer;
@@ -510,32 +566,6 @@ a:hover
     .dropzone--over
     {
         border-style: solid;
-    }
-    .dropzone__input
-    {
-        display: none;
-    }
-    .dropzone__thumb 
-    {
-        width: 100%;
-        height: 100%;
-        border-radius: 10px;
-        overflow: hidden;
-        position: relative;
-    }
-      
-    .dropzone__thumb::after 
-    {
-        content: attr(data-label);
-        position: absolute;
-        top: 40%;
-        left: 0;
-        width: 100%;
-        padding: 5px 0;
-        color: #ffffff;
-        background: rgba(0, 0, 0, 0.75);
-        font-size: 3em;
-        text-align: center;
     }
     #dropZone {
         width: 300px;

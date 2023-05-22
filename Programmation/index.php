@@ -1,15 +1,15 @@
 <?php include ("header.php")?>
 
     <div class=" flex row navbar">
-            <div class="flex row">
+            <div class="flex row logo">
             <div class="image_logo"><a href="Programmation/index.php"><img src="Ressources/image_logo.png" alt="image logo indizik"></a></div>
             <div class="texte_logo"><a href="Programmation/index.php"><img src="Ressources/texte_logo.png" alt="texte logo indizik"></a></div>
             <div class="fin_logo"><a href="Programmation/index.php"><img src="Ressources/end_logo.png" alt="fin du logo"></a></div>
             </div>
             <div class="flex row navpage">
                 <a href="Programmation/index.php"class="navlink active">Accueil</a>
-                <a href="Programmation/Bibliotheque"class="navlink">Bibliothèque</a>
-                <a href="Programmation/Nouveautes.php"class="navlink">Nouveautés</a>
+                <a href="Programmation/maintenance.php"class="navlink">Bibliothèque</a>
+                <a href="Programmation/maintenance.php"class="navlink">Nouveautés</a>
                 <?php
                 session_start();
                 if(isset($_SESSION['login'])){
@@ -20,7 +20,7 @@
                 }
                 }
                 ?>
-                <a href="Programmation/Forum.php"class="navlink">Forum</a>
+                <a href="Programmation/maintenance.php"class="navlink">Forum</a>
                 <div class="search">
                     <input type="text" placeholder="Recherche">
                 </div>
@@ -32,19 +32,35 @@
                     </label>
                     <img src="Ressources/lune.png" alt="lune miniature">
                 </div>
+                <div class="flex row profil">
+                    <ul>
+                        <li class=" deroulant navlink">Mon compte
+                            <ul class="sous">
+                                <?php
+                                    if(isset($_SESSION['login'])){
+                                    if($_SESSION['login']){
+                                    ?>
+                                    <li><a href="Programmation/crud/read/profil.php"class="navlink">Profil</a></li>
+                                    <?php
+                                    }}
+                                ?>
+                                <li><a href="Programmation/crud/create/ajouter_user_form.php"class="navlink">Inscription</a></li>
+                                <li><a href="Programmation/crud/read/login_user_form.php"class="navlink">Connexion</a></li>
+                                <?php
+                                    if(isset($_SESSION['login'])){
+                                    if($_SESSION['login']){
+                                    ?>
+                                    <li><a href="Programmation/logout.php"class="navlink">Déconnexion</a></li>
+                                    <?php
+                                    }}
+                                ?>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
             </div>
-            <div class="flex row profil">
-                <a href="Programmation/crud/create/ajouter_user_form.php"class="navlink">Inscription</a>
-                <a href="Programmation/crud/read/login_user_form.php"class="navlink">Connexion</a>
-                <?php
-                if(isset($_SESSION['login'])){
-                if($_SESSION['login']){
-                ?>
-                <a href="Programmation/logout.php"class="navlink">Déconnexion</a>
-                <?php
-                }}
-                ?>
-            </div>
+            
     </div>
     
     <div class="introduction">
@@ -54,7 +70,7 @@
             <p>Vous êtes à la recherche d’un site pour découvrir de nouveaux artistes ? 
             Vous voulez partager votre musique et avoir la possibilité de créer une communauté autour de vous ?
 
-            <p>Indiezik donne cet opportunité a tous et toutes d’écoutez et partagez de la musique indépendant</p>
+            <p>Indiezik donne cet opportunité à tous et toutes d’écoutez et partagez de la musique indépendant</p>
         </div>
     </div>
     <div class="flex row interraction_page">
@@ -67,7 +83,7 @@
                         Essayer de nouveaux style</p>
                         <p>N'hésitez pas à en informer votre public</p>
                     </div>
-                <a href="Uploads.php" class="inter_link">Mettre en ligne</a>
+                    <a href="Programmation/crud/read/upload_form.php" class="inter_link">Mettre en ligne</a>
             </div>
         </div>
         <div class="flex column inter_right">
