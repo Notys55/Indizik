@@ -3,7 +3,7 @@
 <?php
     if(!empty($_POST['pseudo']) && !empty($_POST['password']))
     {
-        $request = $PDO->query('SELECT * FROM user WHERE pseudo = "'.$_POST['pseudo'].'"');
+        $request = $PDO->query('SELECT * FROM compte WHERE pseudo = "'.$_POST['pseudo'].'"');
         $user = $request->fetch();
 
         if($user)
@@ -18,7 +18,7 @@
             else
             {
                 $message = "Erreur il y a une erreur dans votre pseudo ou mot de passe";
-                header("location: Programmation/crud/login_user_form.php?statut=$message");
+                header("location: login_user_form.php?statut=$message");
             }
         }
     }

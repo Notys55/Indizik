@@ -77,6 +77,20 @@ body
     background-color: #454445;
     color: white ;
 }
+.dark .audio-player
+{
+    background-color: #454445;
+    color: white ;
+}
+
+.dark .navbar
+{
+    background-color: #454445;
+    color: white;
+    fill: white;
+}
+
+
 .checkbox 
 {
 	opacity: 0;
@@ -270,14 +284,6 @@ ul li:hover .sous{
     margin-top: -15px;
 }
 
-
-
-
-
-
-
-
-
 /*page accueil*/
 .texte_intro
 {
@@ -433,7 +439,7 @@ ul li:hover .sous{
     scroll-snap-align: start;
     flex-shrink: 0;
     width: 100%;
-    height: 400px;
+    height: 450px;
     margin-right: 50px;
     border-radius: 10px;
     transform-origin: center center;
@@ -498,7 +504,7 @@ ul li:hover .sous{
 .footer
 {
   width: 90%;
-  height: 100px;
+  height: 150px;
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
@@ -574,4 +580,177 @@ ul li:hover .sous{
         text-align: center;
         line-height: 200px;
         font-size: 18px;
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      .audio-player {
+        width: 100%;
+        height: 70px;
+        margin: auto;
+        justify-content: space-evenly;
+        position: fixed;
+        bottom: 0;
+        background-color: white;
+        color: black;
+      }
+      .image-svg
+      {
+        fill: red;
+        stroke: blue;
+      }
+      .timer
+      {
+        width: 200px;
+        margin: auto;
+        justify-content: space-evenly;
+      }
+      .lecteur
+      {
+        width: 60%;
+        justify-content: space-around;
+      }
+      .player-controls {
+        width: 150px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: black;
+      }
+      .playAudio {
+        -webkit-appearance: none;
+        outline: none;
+        cursor: pointer;
+        border: none;
+        width: 30px;
+        height: 30px;
+        background-color: transparent;
+      }
+      
+      .previousTrack {
+        -webkit-appearance: none;
+        outline: none;
+        cursor: pointer;
+        border: none;
+        width: 30px;
+        height: 30px;
+        background-color: transparent;
+      }
+      
+      .nextTrack {
+        -webkit-appearance: none;
+        outline: none;
+        cursor: pointer;
+        border: none;
+        width: 30px;
+        height: 30px;
+        background-color: transparent;
+      }
+      .volume
+      {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20%;
+      }
+      .volume-img
+      {
+        -webkit-appearance: none;
+        outline: none;
+        cursor: pointer;
+        border: none;
+        width: 30px;
+        height: 30px;
+        background-color: transparent;
+      }
+      .playAudio > img {
+        width: 100%;
+      }
+      .volumeSlider
+      {
+        /* transform: rotate(-90deg); */
+        -webkit-appearance:none;
+        height: 10px;
+        border-radius: 5px 5px 5px 5px;
+        width: 100px;
+        background-color: #FFEB9C;
+      }
+      input[type="range"]::-webkit-slider-thumb {
+        background-color: white;
+      }
+      
+      input[type="range"]::-moz-range-thumb {
+        background-color: white;
+      }
+      
+      input[type="range"]::-ms-thumb {
+        background-color: white;
+      }
+      .previousTrack > img {
+        width: 100%;
+      }
+      
+      .nextTrack > img {
+        width: 100%;
+      }
+      .volume-img > img 
+      {
+        width: 100%;
+      }
+      
+      small {
+        font-size: 10px;
+      }
+      
+      .seekObjContainer {
+        width: 70%;
+        position: relative;
+        margin: auto;
+        align-items: center;
+        justify-content: space-evenly;
+
+      }
+      
+      .seekObj {
+        position: relative;
+        align-items: center;
+        width: 100%;
+        height: 7px;
+        background-color: #000000;
+        border-radius: 5px 5px 5px 5px;
+      }
+      
+      .percentage {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        background-color: #FFEB9C;
+      }
+      .titre
+      {
+        width: 20%;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+      }
+      .currentTrackTitle
+      {
+        justify-content: center;
+        align-items: center;
       }

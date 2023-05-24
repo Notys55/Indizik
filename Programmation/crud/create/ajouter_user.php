@@ -5,7 +5,7 @@
     if( !empty($_POST['pseudo']) && !empty($_POST['password']) && !empty($_POST['email'])&& !empty($_POST['nickname']) && !empty($_POST['fullname']) )
     {
         $email = $_POST['email'];
-        $verifUser = $PDO ->query('SELECT COUNT(*) FROM user WHERE email = "' .$email.'"');
+        $verifUser = $PDO ->query('SELECT COUNT(*) FROM compte WHERE email = "' .$email.'"');
         $verifUserNombre = $verifUser->fetch();
         if($verifUserNombre[0] == 0)
         {
@@ -16,7 +16,7 @@
                 $sql = $requete->execute([$_POST['pseudo'], $mdp, $_POST['email'],$_POST['nickname'],$_POST['fullname']]);
 
                 $message = "Vous avez bien était enregistrer";
-                header("location: profil.php?message=$message");
+                header("location: ../read/login_user_form.php?message=$message");
                 exit;
             }
             catch (PDOException $e) 

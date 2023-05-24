@@ -8,8 +8,8 @@
             </div>
             <div class="flex row navpage">
                 <a href="Programmation/index.php"class="navlink">Accueil</a>
-                <a href="Programmation/Bibliotheque"class="navlink">Bibliothèque</a>
-                <a href="Programmation/Nouveautes.php"class="navlink">Nouveautés</a>
+                <a href="Programmation/maintenance.php"class="navlink">Bibliothèque</a>
+                <a href="Programmation/maintenance.php"class="navlink">Nouveautés</a>
                 <?php
                 session_start();
                 if(isset($_SESSION['login'])){
@@ -20,7 +20,7 @@
                 }
                 }
                 ?>
-                <a href="Programmation/Forum.php"class="navlink">Forum</a>
+                <a href="Programmation/maintenance.php"class="navlink">Forum</a>
                 <div class="search">
                     <input type="text" placeholder="Recherche">
                 </div>

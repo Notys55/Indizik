@@ -12,7 +12,9 @@
 
 .audio-player {
   width: 100%;
+  height: 50px;
   margin: auto;
+  justify-content: space-around;
   background-color: white;
   border: 1px solid black;
 }
@@ -54,6 +56,13 @@
   height: 30px;
   background-color: transparent;
 }
+.volume
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+}
 .volume-img
 {
   -webkit-appearance: none;
@@ -70,8 +79,22 @@
 .volumeSlider
 {
   /* transform: rotate(-90deg); */
-  margin-bottom: 40px;
+  -webkit-appearance:none;
+  height: 10px;
+  border-radius: 5px 5px 5px 5px;
   width: 100px;
+  background-color: #FFEB9C;
+}
+input[type="range"]::-webkit-slider-thumb {
+  background-color: white;
+}
+
+input[type="range"]::-moz-range-thumb {
+  background-color: white;
+}
+
+input[type="range"]::-ms-thumb {
+  background-color: white;
 }
 .previousTrack > img {
   width: 100%;
@@ -114,5 +137,15 @@ small {
   left: 0;
   top: 0;
   height: 100%;
-  background-color: coral;
+  background-color: #FFEB9C;
+}
+.titre
+{
+  width: 20%;
+  justify-content: center;
+  align-items: center;
+}
+.currentTrackTitle
+{
+  width: 1000px;
 }

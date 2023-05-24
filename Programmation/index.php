@@ -249,4 +249,5 @@
         </div>
 
     </div>
-<?php include ("footer.php")?>
+<?php include ("lecteur.php");?>
+<?php include ("footer.php");?>
