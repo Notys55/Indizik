@@ -24,9 +24,50 @@ window.addEventListener('scroll', function() {
   }
 });
 //fin changement couleur navbar
+const playButton = document.querySelector('.playAudio');
+const nextButton = document.querySelector('.nextTrack');
+const previousButton = document.querySelector('.previousTrack');
+const volumeButton = document.querySelector('.volume-img');
+const playbtnButton = document.querySelector('.play-btn');
+const darkModeButton = document.querySelector('#chk');
 
+darkModeButton.addEventListener('change', () => {
+  if (darkModeButton.checked) {
+    // Mode sombre activé
+    playButton.classList.add('dark');
+    playButton.querySelector('img').setAttribute('src', 'Ressources/play-scrolled.svg');
+
+	nextButton.classList.add('dark');
+    nextButton.querySelector('img').setAttribute('src', 'Ressources/next-scrolled.svg');
+
+	previousButton.classList.add('dark');
+    previousButton.querySelector('img').setAttribute('src', 'Ressources/previous-scrolled.svg');
+
+	volumeButton.classList.add('dark');
+    volumeButton.querySelector('img').setAttribute('src', 'Ressources/volume-scrolled.svg');
+
+	playbtnButton.classList.add('dark');
+    playbtnButton.querySelector('img').setAttribute('src', 'Ressources/play-scrolled.svg');
+
+  } else {
+    // Mode sombre désactivé
+    playButton.classList.remove('dark');
+    playButton.querySelector('img').setAttribute('src', 'Ressources/play.svg');
+
+	nextButton.classList.remove('dark');
+    nextButton.querySelector('img').setAttribute('src', 'Ressources/next.svg');
+
+	previousButton.classList.remove('dark');
+    previousButton.querySelector('img').setAttribute('src', 'Ressources/previous.svg');
+
+	volumeButton.classList.remove('dark');
+    volumeButton.querySelector('img').setAttribute('src', 'Ressources/volume.svg');
+
+	playbtnButton.classList.remove('dark');
+    playbtnButton.querySelector('img').setAttribute('src', 'Ressources/play.svg');
+  }
+});
 //disparition du titre dans le logo  !!!(pas terminer)!!!  //
-
 window.addEventListener('scroll', function() {
 	var texteLogo = document.querySelector('.texte_logo');
 	var imageLogo = document.querySelector('.image_logo');
@@ -159,10 +200,24 @@ class Player {
 	}
   
 	updatePlayButton() {
+	  const playButtonImage = this.playButton.querySelector('img');
+
 	  if (this.media.paused) {
-		this.playButton.innerHTML = '<img src="Ressources/play.svg">';
-	  } else {
-		this.playButton.innerHTML = '<img src="Ressources/pause.svg">';
+		if(darkModeButton.checked){
+			this.playButton.innerHTML = '<img src="Ressources/play-scrolled.svg">';
+		}
+		else{
+			this.playButton.innerHTML = '<img src="Ressources/play.svg">';
+		}
+		
+	  } 
+	  else {
+		if(darkModeButton.checked){
+			this.playButton.innerHTML = '<img src="Ressources/pause-scrolled.svg">';
+		}
+		else{
+			this.playButton.innerHTML = '<img src="Ressources/pause.svg">';
+		}
 	  }
 	}
   

@@ -12,9 +12,9 @@
   </div>
   <div class="flex row lecteur">
   <div class="flex row player-controls">
-    <button class="previousTrack"><img  class="icon-previous" src="Ressources/previous.svg"></button>
-    <button class="playAudio"><img src="Ressources/play.svg"></button>
-    <button class="nextTrack"><img src="Ressources/next.svg"></button>
+    <button class="previousTrack"><img class="dark-image" src="Ressources/previous.svg"></button>
+    <button class="playAudio"><img class="dark-image" src="Ressources/play.svg"></button>
+    <button class="nextTrack"><img class="dark-image" src="Ressources/next.svg"></button>
   </div>
     <div class="flex row seekObjContainer">
       <div class="seekObj">
@@ -30,7 +30,7 @@
   </div>
 
   <div class="flex row volume">
-        <button class="volume-img"><img class="svg_icon" src="Ressources/volume.svg"></button>
+        <button class="volume-img"><img class="dark-image" src="Ressources/volume.svg"></button>
         <input type="range" class="volumeSlider" min="0" max="1" step="0.01" value="1">
     </div>
 
